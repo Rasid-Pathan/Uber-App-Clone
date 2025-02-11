@@ -79,7 +79,7 @@ export default function CaptainHome() {
   useGSAP(function () {
     if (confirmRidePopUpPanel) {
       gsap.to(confirmRidePopUpRef.current, {
-        translateY: '0%'
+        translateY: '30%'
       })
     } else {
       gsap.to(confirmRidePopUpRef.current, {
@@ -99,7 +99,7 @@ export default function CaptainHome() {
         </Link>
       </div>
 
-      <div className='h-3/5'>
+      <div className='h-2/3'>
         {/* <img className='h-full w-full object-cover' src="https://user-images.githubusercontent.com/6416095/52931260-c6bb5e80-3371-11e9-9d46-83f7d1389d18.gif" alt="" /> */}
             
             <LiveTracking />
@@ -107,7 +107,7 @@ export default function CaptainHome() {
       </div>
 
 
-      <div className='h-2/5 p-6'>
+      <div className='h-1/3 p-6'>
         <CaptainDetails />
       </div>
 

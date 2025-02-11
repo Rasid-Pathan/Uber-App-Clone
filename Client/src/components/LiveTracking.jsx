@@ -28,7 +28,7 @@ function LiveTracking() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           }
-          console.log('User location:', newLocation)
+          // console.log('User location:', newLocation)
           setLocation(newLocation)
         },
         (error) => console.error('Error getting location:', error)
@@ -45,7 +45,7 @@ function LiveTracking() {
   }, [])
 
   const onLoad = useCallback((map) => {
-    console.log('Map Loaded:', map)
+    // console.log('Map Loaded:', map)
     setMap(map)
   }, [])
 
@@ -55,8 +55,8 @@ function LiveTracking() {
 
   useEffect(() => {
     if (isLoaded && map && location) {
-      console.log('Map Ready:', map)
-      console.log('Creating marker at:', location)
+      // console.log('Map Ready:', map)
+      // console.log('Creating marker at:', location)
 
       // ✅ Remove previous marker before adding a new one
       if (marker) {
@@ -74,7 +74,7 @@ function LiveTracking() {
       
 
       setMarker(newMarker)
-      console.log('Marker added:', newMarker)
+      // console.log('Marker added:', newMarker)
     }
   }, [isLoaded, map, location])
 
